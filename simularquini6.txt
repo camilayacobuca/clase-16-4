@@ -1,0 +1,38 @@
+import random
+grilla=[0,46]
+sorteo=[]
+player1=[20,4,9,11,40,33]
+player2=[7,19,36,1,15,20]
+num_sorteo=0
+cotador=0
+#player1=random.sample(range(46),6)
+for i range (46):
+    grilla.append(i)
+#comienza el sorteo
+while grilla and player1 and player2:
+    num_sorteo=random.choice(grilla)
+    sorteo.append(num_sorteo)
+
+    if num_sorteo in player1:
+        player1.remove(num_sorteo)
+        
+        
+    if num_sorteo in player2:
+        player2.remove(num_sorteo)
+        
+    grilla.remove(num_sorteo)   
+    #contador=contador+1
+
+#print (grilla)
+print ("numeros sorteados:", sorteo)
+
+if not player1 and not player2:
+    print("empate")
+elif not player1:
+    print("ganó player1")
+else:
+    print ("ganó player2")
+
+
+
+        

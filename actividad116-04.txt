@@ -1,0 +1,6 @@
+notas=[19, 21, 23,25]
+notas.append(27)
+notas.remove(19)
+print(len(notas))
+
+print (notas[-1])
